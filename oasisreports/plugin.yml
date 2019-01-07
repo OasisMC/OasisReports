@@ -1,0 +1,49 @@
+name: OasisReports
+main: xyz.olivermartin.plugins.oasisreports.OasisReports
+version: 2.0
+api-version: 1.13
+description: Custom player reporting system for Oasis MC
+author: Oliver Martin (Revilo410) [Original code by Paxination]
+commands:
+
+  report:
+    description: The report command
+    usage: "Usage: /<command> Help me I have been griefed!"
+    permission: oasisreports.report
+    permission-message: You don't have permissions for <permission>
+    
+  links:
+    description: Shows a list of useful server links
+    usage: "Usage: /<command>"
+    permission: oasisreports.links
+    permission-message: You don't have permissions for <permission>
+    
+  donate:
+    description: Shows a link to donate to the server
+    usage: "Usage: /<command>"
+    permission: oasisreports.links
+    permission-message: You don't have permissions for <permission>
+    
+  forums:
+    description: Shows a link to the server forums
+    usage: "Usage: /<command>"
+    permission: oasisreports.links
+    permission-message: You don't have permissions for <permission>
+    
+  member:
+    description: Shows a link to the member rank application tutorial
+    usage: "Usage: /<command>"
+    permission: oasisreports.links
+    permission-message: You don't have permissions for <permission>
+    
+permissions:
+    oasisreports.links:
+        description: OasisReports links permission node
+    oasisreports.staff:
+        description: OasisReports staff permission node
+        children:
+            oasisreports.clear: true
+    oasisreports.clear:
+        description: Clears a single report.
+    oasisreports.clearall:
+        description: Clears the entire reports list.
