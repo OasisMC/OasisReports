@@ -265,6 +265,11 @@ public class OasisReports extends JavaPlugin implements Listener {
 		}
 
 		// If player is not staff (or if they are staff but havent used a staff command...
+		
+		if (args.length == 0) {
+			sender.sendMessage(ChatColor.RED + "Please provide a reason for your report! For example: /report Help, I am being griefed!");
+			return true;
+		}
 
 		if (reports.isEmpty()) {
 
